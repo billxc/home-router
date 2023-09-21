@@ -1,0 +1,7 @@
+{
+  "subscriptionId": "12345678-1234-5678-abcd-1234567890ab",
+  "tenantId": "12345678-abcd-1234-5678-1234567890ab",
+  "appId": "12345678-1234-abcd-5678-1234567890ab",
+  "password": "mysecretpassword",
+  "resourceGroupName": "myresourcegroup"
+}
