@@ -14,7 +14,6 @@ import logging
 class AzureConfig:
     def __init__(self, configDict):
         self.subscriptionId = configDict["subscriptionId"]
-        self.tenantId = configDict["tenantId"]
         self.appId = configDict["appId"]
         self.password = configDict["password"]
         self.resourceGroupName = configDict["resourceGroupName"]
@@ -34,7 +33,7 @@ def init(args):
     with open(args.config) as f:
         config = json.load(f)
         # validate config
-        for k in ["subscriptionId","tenantId","appId","password","resourceGroupName"]:
+        for k in ["subscriptionId","appId","password","resourceGroupName"]:
             if k not in config:
                 raise Exception(f"config file missing key: {k}")
         CONFIG = AzureConfig(config)
