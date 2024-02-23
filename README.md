@@ -54,6 +54,12 @@ I will use [Docker on OpenWrt](https://openwrt.org/docs/guide-user/virtualizatio
 ### Nginx
 Nginx is used for expose websites to the Internet. I will use it to expose my services to the Internet. OpenWrt's own web server is uhttpd, but it is for the router's own web UI. I do not want to make an isolated web server for my services.
 
-I tried to install nginx with opkg, but failed. Also, Nginx is very likely to be conflict with uhttpd, so I will use Docker to run it.
+#### Nginx in Docker, the pros and cons
+- Pros
+1. Nginx can have some complex configurations, it will also conflict with the uhttpd if luci-app-nginx is installed.  
+Docker just isolate it from the OpenWrt system.
+- Cons
+1. Nginx in Docker will have a little performance loss, while it is acceptable.
+
 
 
