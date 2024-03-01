@@ -9,8 +9,8 @@ use opkg to install it.
 
 see [zsh.md](zsh.md)
 
-
-
+## Update Mirror
+sed -i 's_mirrors.vsean.net/openwrt_mirror.nju.edu.cn/immortalwrt_'  /etc/opkg/distfeeds.conf
 ## links
 
 
